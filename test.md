@@ -1,24 +1,24 @@
-# What is the title of your project?
+# a
 
 ## Description
 
-What is your motivation for your project?
-Why did you build this project?
-What problem does it solve?
-What did you learn?
+b
+c
+d
+e
 
 ## Installation
 
-How do you install your project?
+f
 
 ## Usage
 
-How do you use your project?
+g
 
 ## Credits
 
-List all of your collaborators, 3rd party assets, or tutorials followed:
+h
 
 ## License
 
-What license does your project use?
+MIT
