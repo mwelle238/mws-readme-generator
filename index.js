@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
 const licenses = ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'Other', 'None' ];
-const badges = ['![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)',
+const badges = ['![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)',
                 '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)',
                 '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
                 '![License: Other](https://img.shields.io/badge/License-Other-red.svg)',
@@ -32,7 +32,7 @@ function getLicBadge(license){
 
     // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const sectionHeaders = ["Description", "Table of Contents", "Installation", "Usage", "Credits", "License", "Contact" ];
+    const sectionHeaders = ["Description", "Table of Contents", "Installation", "Usage", "Credits", "License", "Questions" ];
     const badge = getLicBadge(data.license);
 
     fs.writeFile(fileName, 
@@ -40,10 +40,10 @@ function writeToFile(fileName, data) {
 ${badge}
 ## ${sectionHeaders[0]}
 
-${data.motive}
-${data.why}
-${data.problem}
-${data.lesson}
+${data.motive}\n
+${data.why}\n
+${data.problem}\n
+${data.lesson}\n
 
 ## ${sectionHeaders[1]}
 
@@ -71,7 +71,7 @@ ${data.license}
 
 ## ${sectionHeaders[6]}
 
-Email: [${data.email}](mailto:${data.email})
+Email: [${data.email}](mailto:${data.email})\n
 Github: [github.com/${data.github}](https://www.github.com/${data.github})`, (err) =>
         err ? console.error(err) : console.log("success!"));
 }
@@ -80,7 +80,7 @@ Github: [github.com/${data.github}](https://www.github.com/${data.github})`, (er
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-        writeToFile('test.md', data);
+        writeToFile('./dist/README.md', data);
     });
 }
 
