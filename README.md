@@ -57,4 +57,4 @@ Github: [github.com/mwelle238](https://www.github.com/mwelle238)
 
 ## Demo
 
-![Demo video](https://github.com/mwelle238/MWs-Weather-App/blob/main/demo/demo.webm)
+![Demo video](https://github.com/mwelle238/mws-readme-generator/blob/main/demo/demo.webm)
